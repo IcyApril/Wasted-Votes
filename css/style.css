@@ -1,0 +1,44 @@
+.blue-header {
+    background-color: #3b5998;
+    color: #FFFFFF;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+footer {
+    background-color: #3b5998;
+    color: #FFFFFF;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+}
+
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+    color:#FFFFFF;
+    text-decoration: underline;
+}
+
+h1.results-header {
+    font-size: 40px;
+}
+
+.google-charts {
+    margin-bottom: 30px;
+}
+
+.sharebar {
+    background-color: #f5f5f5;
+    padding: 20px 0 20px 0;
+    border: #ddd 1px solid;
+    margin: 20px 0 20px 0;
+}

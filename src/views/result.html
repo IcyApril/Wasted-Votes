@@ -1,0 +1,234 @@
+{% include 'subviews/header.html' %}
+<div class="jumbotron blue-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="results-header">{{data.constituency}} Wasted Votes</h1>
+                <p class="lead">One person, one vote is a myth. <b>In {{data.constituency}},
+                    voters had the power of about {{data.marginalityWithSize}} of a vote.</b></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h2>{{data.wastedVotesPercentage}}% of votes were wasted in {{data.constituency}}.</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+            <div id="wasted_chart_div" class="google-charts" style="width: 400px; height: 120px;"></div>
+        </div>
+        <div class="col-md-7">
+            <p><b>{{data.wastedVotes}} of {{data.totalVotes}}</b> votes were wasted in {{data.constituency}}.
+            This includes those who voted against their winning MP and surplus votes for the winning MP.
+                In Britain more than half of all voters voted for losing candidates, their votes were simply thrown
+                away.
+            </p>
+            <p>
+                Wasted votes lead to "tactical voting", where voters don't vote for the candidate they like, but the
+                least worst candidate that may win, over time this leads to a one or two party rule in an area.
+            </p>
+            <p>Under a Proportional election system like Single Transferable Vote, wasted votes would go to electing
+            MPs the voters want. People who vote against their winning MP (more than half of the electorate in recent times)
+            would have their vote go towards electing a candidate they want.</p>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-1">
+            <h2>Voters in {{data.constituency}} had, at best, {{data.marginalityWithSize}} of a vote.</h2>
+            <p>This figure takes account of how difficult it is for voters to be able to change their MP
+            and it also takes account of how diluted your vote is by the size of the local area.</p>
+            <p>{{data.constituency}} came <b>{{data.rank}} out of 650</b> in our ranking of voter power by constituency.</p>
+        </div>
+        <div class="col-md-2">
+            <div id="power_chart_div" class="google-charts" style="width: 400px; height: 120px;"></div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h2>What this doesn't include:</h2>
+            <p>The data here only talks about the undemocratic nature of the First Past the Post electoral system,
+            it does not cover:</p>
+            <ul>
+                <li>An unelected House of Lords with religious clerics, party donors & hereditory power.</li>
+                <li>The big money given to the biggest political parties by corporate donors and trade unions.</li>
+                <li>The effect of a biased politicised media.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="sharebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-4">
+                <div class="fb-like" data-href="http://wastedvotes.reformfoundation.org" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+            <div class="col-md-2">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="A majority voters in the last General Election voted against their winning MP; was your vote wasted?" data-via="ReformFDN" data-related="ReformFDN">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+        <h2>Help build a better British democracy.</h2>
+        <p class="lead">
+            Do you believe we can and should build a better democracy? If so, please join us:
+        </p>
+        <p>
+            The Reform Foundation is a think-tank indepdendent of political parties that is committed to building a
+            better democracy; one where the authority of government derives from the people.
+        </p>
+    <!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <div id="mc_embed_signup">
+        <form action="//reformfoundation.us9.list-manage.com/subscribe/post?u=c0fbcc3a01e3fb202ce70657b&amp;id=4a6cecb9b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+                <h2>Subscribe to The Reform Foundation</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                    </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_c0fbcc3a01e3fb202ce70657b_4a6cecb9b3" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+    </div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <!--End mc_embed_signup-->
+        </div>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="text-center">Search another area</h2>
+            <div class="well">
+                <form method="post" action="/?q=search" method="get">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="area" placeholder="Search by postcode or constituency.">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">Go!</button>
+                                </span>
+                    </div><!-- /input-group -->
+                </form>
+                <br />
+                <a href="/#why" class="btn btn-block btn-primary">Why we need reform</a>
+            </div>
+        </div><!-- /.col-md-6 col-md-offset-3 -->
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+            <h2 class="reduced">Most Power</h2>
+            <ul class="list-group">
+                {% set seat = 1 %}
+                {% for result in data.topAreas %}
+                <li class="list-group-item">
+                    <a href="/?constituency={{result|url_encode}}">{{result}}</a>
+                    <span class="pull-right">{{ seat }}</span>
+                    {% set seat = seat + 1 %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-md-4 col-md-offset-2">
+            <h2 class="reduced">Least Power</h2>
+            <ul class="list-group">
+                {% set seat = 646 %}
+                {% for result in data.bottomAreas %}
+                <li class="list-group-item">
+                    <a href="/?constituency={{result|url_encode}}">{{result}}</a>
+                    <span class="pull-right">{{ seat }}</span>
+                    {% set seat = seat + 1 %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Google Charts -->
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['gauge']}]}"></script>
+<script>
+    google.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+        drawPowerChart();
+        drawWastedChart();
+    }
+
+    function drawPowerChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['Power', {{ data.marginalityWithSize }}],
+        ]);
+
+        var options = {
+            width: 500, height: 150,
+            redFrom: 0, redTo: 0.4,
+            yellowFrom:0.4, yellowTo: 0.9,
+            greenFrom:0.9, greenTo:1.5,
+            minorTicks: 0.5,
+            min: 0,
+            max: 1.5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('power_chart_div'));
+
+        chart.draw(data, options);
+    }
+
+    function drawWastedChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['Wasted', {{ data.wastedVotesPercentage }}],
+    ]);
+
+    var options = {
+        width: 500, height: 150,
+        redFrom: 60, redTo: 100,
+        yellowFrom:15, yellowTo: 60,
+        greenFrom:0, greenTo:15,
+        minorTicks: 5
+    };
+
+    var chart = new google.visualization.Gauge(document.getElementById('wasted_chart_div'));
+
+    chart.draw(data, options);
+    }
+</script>
+{% include 'subviews/footer.html' %}
