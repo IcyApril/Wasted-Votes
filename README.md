@@ -6,10 +6,18 @@ This is a very, very basic and small project; the code is mainly here for anyone
 
 ## To get it working
 
-1. Please check the MySQL details in src/models/Base.php batch your database.
+1. Please check the MySQL details in src/models/Base.php match your database login (lines 19-22).
 2. Import the various MySQL databases (.sql files).
 3. You might want to run a composer install/composer upgrade (though I haven't made a .gitignore file).
-3. If you wish to repopulate the wasted_votes_2010 table, truncate it and run index.php/?q=generate.
+4. If you wish to repopulate the wasted_votes_2010 table, truncate it and run index.php/?q=generate.
+
+### PHPUnit
+
+In the tests directory there are some PHPUnit tests which may be useful.
+
+### Autoloading
+
+I have used the composer autoloader in PSR-4 compliant mode.
 
 ## Licence
 
