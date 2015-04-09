@@ -44,7 +44,7 @@ class Search {
             CURLOPT_POST => 1,
             CURLOPT_POSTFIELDS => array(
                 'postcode' => $postcode,
-                'key' => 'Ft2qHtB4SQVSEUUbjCF33Auh'
+                'key' => ''
             )
         ));
         // Send the request & save response to $resp
